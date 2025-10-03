@@ -40,13 +40,13 @@ st.title('Predicción de riesgo de un auto')
 Edad = st.slider('age', min_value=14, max_value=70, value=20, step=1)
 #Se tienen que llamar exactamente igual a como están en los datos, hasta con los mismos espacios
 tipo_carro = st.selectbox('cartype', ["combi", "family", "sport", "minivan"])
-riesgo = st.selectbox('risk', ['high', 'low'])
+
 
 
 #Dataframe
 #Tiene que tener el mismo nombre al Dataset de despliegue
-datos = [[Edad, tipo_carro,riesgo]]
-data = pd.DataFrame(datos, columns=['age', 'cartype', 'risk']) #Dataframe con los mismos nombres de variables
+datos = [[Edad, tipo_carro]]
+data = pd.DataFrame(datos, columns=['age', 'cartype']) #Dataframe con los mismos nombres de variables
 
 #Se realiza la preparación debe ser igual al aprendizaje
 data_preparada=data.copy()
